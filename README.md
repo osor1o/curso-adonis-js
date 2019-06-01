@@ -1,5 +1,3 @@
-
-
 # Ambiente docker para o curso de AdonisJS.
 
 **[Iniciando aplicação](#iniciando-aplicação)**
@@ -14,6 +12,12 @@
 - [Iniciar containers pausados](#iniciar-containers-pausados)
 - [Pausar containers](#pausar-containers)
 - [Destruir containers](#destruir-containers)
+
+---
+
+## Requisitos
+- **Docker:** https://docs.docker.com/install/
+- **Docker Compose:** https://docs.docker.com/compose/install/
 
 ---
 
