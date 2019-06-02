@@ -9,6 +9,7 @@ class PostagensSchema extends Schema {
       table.increments()
       table.string('titulo', 120).notNullable().unique()
       table.text('corpo').notNullable()
+      table.string('imagem', 255).notNullable()
       table.integer('usuarioId').unsigned()
       table.foreign('usuarioId').references('id').inTable('users')
       table.timestamps()

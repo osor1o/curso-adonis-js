@@ -16,4 +16,10 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.resource("/postagens", "Teste2Controller")
+Route.resource("usuarios", "UsuarioController")
+Route.resource("postagens", "PostagemController").middleware(['auth'])
+Route.get("login", "UsuarioController.getToken")
+Route.get("postagnesusuario/:id", "UsuarioController.postagnesUsuario")
+Route.get("usuariodapostagem/:id", "PostagemController.usuarioDaPostagem")
+
+
