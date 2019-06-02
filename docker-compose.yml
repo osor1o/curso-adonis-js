@@ -11,3 +11,17 @@ services:
             - ./api:/home
         stdin_open: true
         tty: true
+        restart: always
+        depends_on: 
+            - db
+    db:
+        image: mariadb
+        container_name: db
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: cursoadonisjs
+            MYSQL_USER: adonisjs
+            MYSQL_PASSWORD: secret
+        ports: 
+            - "3307:3306"
